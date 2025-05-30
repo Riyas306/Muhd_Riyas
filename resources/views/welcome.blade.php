@@ -89,40 +89,42 @@
 
         <div class="grid md:grid-cols-3 place-items-center gap-5">
             <div
-                class="relative w-full border border-[#feb633] shadow-md rounded-md flex flex-col justify-center items-center px-4 gap-2 transition ease-in-out delay-300 duration-150 group h-[14rem]">
+                class="relative w-full border border-[#feb633] shadow-md rounded-md flex flex-col justify-center items-center px-4 gap-2 transition ease-in-out delay-300 duration-150 group h-[15rem]">
                 <h2
-                    class="font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:-translate-y-20  transition ease-in-out delay-150 duration-200 uppercase">
+                    class="font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:-translate-y-24  transition ease-in-out delay-150 duration-200 uppercase">
                     web design
                 </h2>
                 <p
                     class="opacity-0 group-hover:opacity-100 ease-in-out duration-300 delay-200 text-justify translate-y-5 text-[#8a91ac]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptas minus quos animi! Eaque
-                    nam, totam animi ipsam esse alias.
+                    I develop full-stack web applications using Laravel and React, integrating RESTful APIs, real-time features with Firebase,
+                    and secure user authentication. From concept to deployment, I design scalable and maintainable solutions that solve real
+                    business problems, including ticketing systems, HR panels, and e-commerce platforms.
                 </p>
             </div>
             <div
-                class="relative w-full border border-[#feb633] shadow-md rounded-md flex flex-col justify-center items-center px-4 gap-2 transition ease-in-out delay-300 duration-150 group h-[14rem]">
+                class="relative w-full border border-[#feb633] shadow-md rounded-md flex flex-col justify-center items-center px-4 gap-2 transition ease-in-out delay-300 duration-150 group h-[15rem]">
                 <h2
-                    class="font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:-translate-y-20 transition ease-in-out delay-150 duration-200 uppercase">
+                    class="font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:-translate-y-24 transition ease-in-out delay-150 duration-200 uppercase">
                     frontend
                 </h2>
                 <p
                     class="opacity-0 group-hover:opacity-100 ease-in-out duration-300 delay-200 text-justify translate-y-5 text-[#8a91ac]">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat esse ea quasi, nam quis obcaecati
-                    placeat. Quis placeat quo quos, maiores laudantium totam harum! Earum aliquam perspiciatis delectus
-                    debitis nobis.
+                    I craft responsive, user-friendly interfaces using React.js, Tailwind CSS, Bootstrap, and Alpine.js.
+                    My focus is on building clean UI components that enhance user experience and performance across all devices.
+                    Whether it's a dynamic dashboard or an interactive web portal, I ensure pixel-perfect designs and smooth interactivity.
                 </p>
             </div>
             <div
-                class="relative w-full border border-[#feb633] shadow-md rounded-md flex flex-col justify-center items-center px-4 gap-2 transition ease-in-out delay-300 duration-150 group h-[14rem]">
+                class="relative w-full border border-[#feb633] shadow-md rounded-md flex flex-col justify-center items-center px-4 gap-2 transition ease-in-out delay-300 duration-150 group h-[15rem]">
                 <h2
-                    class="font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:-translate-y-20 transition ease-in-out delay-150 duration-200 uppercase">
+                    class="font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:-translate-y-24 transition ease-in-out delay-150 duration-200 uppercase">
                     backend
                 </h2>
                 <p
                     class="opacity-0 group-hover:opacity-100 ease-in-out duration-300 delay-200 text-justify translate-y-5 text-[#8a91ac]">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, architecto? Explicabo amet
-                    suscipit nisi consectetur, quasi debitis libero esse hic aspernatur magni, odio dolorum culpa.
+                    I build robust and scalable backends using Laravel and PHP, designing optimized database structures with MySQL and SQLite.
+                    I implement clean architecture and efficient API communication to ensure high performance and maintainability.
+                    I also integrate third-party services and handle complex role-based access systems.
                 </p>
             </div>
         </div>
@@ -150,13 +152,18 @@
             </button>
         </div>
 
-        <div x-show="activeTab === 'experience'" class="flex w-full flex-col items-center justify-center">
+        <!-- Experience -->
+        <div x-show="activeTab === 'experience'" x-transition:enter="transition duration-500 delay-500 ease-out"
+            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition duration-300 ease-in" x-transition:leave-end="opacity-0 scale-95"
+            class="flex w-full flex-col items-center justify-center">
             <div class="relative flex w-full items-center justify-center gap-x-10">
                 <div class="absolute -translate-x-56">
-                    <h2 class="text-xl text-[#32333c]">INFOLKS PVT LTD</h2>
-                    <p>Full Stack Developer</p>
+                    <h2 class="text-xl">INFOLKS PVT LTD</h2>
+                    <p class="text-[#32333c] italic">Full Stack Developer</p>
                 </div>
-                <div class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                <div
+                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
                     <p>Present</p>
                     <p>|</p>
                     <p>2021</p>
@@ -168,13 +175,76 @@
             <div class="relative flex w-full items-center justify-center gap-x-10">
                 <div class="absolute translate-x-[23rem]">
                     <h2 class="text-xl">FLEMING EMBEDDED AND SOFTWARE SOLUTIONS</h2>
-                    <p>Python Intern</p>
+                    <p class="text-[#32333c] italic">Python Intern</p>
                 </div>
-                <div class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                <div
+                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
                     <p>2015</p>
                     <p>|</p>
                     <p>2020</p>
                 </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div x-show="activeTab === 'education'" x-transition:enter="transition duration-500 delay-500 ease-out"
+            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95" class="flex w-full flex-col items-center justify-center">
+
+            <div class="relative flex w-full items-center justify-center gap-x-10">
+                <div class="absolute -translate-x-60">
+                    <h2 class="text-xl">Central University of Kerala</h2>
+                    <p class="text-[#32333c] italic">MSC Computer Science</p>
+                </div>
+                <div
+                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                    <p>2021</p>
+                    <p>|</p>
+                    <p>2019</p>
+                </div>
+            </div>
+
+            <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
+
+            <div class="relative flex w-full items-center justify-center gap-x-10">
+                <div class="absolute translate-x-56">
+                    <h2 class="text-xl">MES College Ponnani</h2>
+                    <p class="text-[#32333c] italic">BSC Computer Science</p>
+                </div>
+                <div
+                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                    <p>2015</p>
+                    <p>|</p>
+                    <p>2018</p>
+                </div>
+            </div>
+
+            <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
+
+            <div class="relative flex w-full items-center justify-center gap-x-10">
+                <div class="absolute -translate-x-56">
+                    <h2 class="text-xl">KHSS Kumaramputhur</h2>
+                    <p class="text-[#32333c] italic">Plus Two</p>
+                </div>
+                <div
+                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                    <p>2015</p>
+                    <p>|</p>
+                    <p>2013</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="my-10 md:my-20 bg-[#fbfbfb] h-[45rem]">
+        <div class="container mx-auto">
+            <div class="flex flex-col justify-center items-center gap-2 py-5">
+                <h2 class="text-center text-[#32333c] text-4xl font-bold capitalize">
+                    Projects
+                </h2>
+                <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
             </div>
         </div>
     </section>
