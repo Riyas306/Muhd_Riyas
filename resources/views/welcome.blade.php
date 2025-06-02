@@ -23,555 +23,558 @@
 </head>
 
 <body class="">
-    <!-- Hero -->
-    <section class="bg-[#fbfbfb]">
-        <div class="w-full h-[45rem] md:h-screen container mx-auto">
-            <div class="grid md:grid-cols-2 md:place-items-center text-[#32333c] w-full h-full">
-                <div class="flex flex-col px-4 space-y-4 justify-center items-center md:items-start">
-                    <p class="text-2xl md:text-4xl font-bold mt-20 md:mt-0">Muhammed Riyas A</p>
-                    <p class="text-center md:text-left">React & Laravel Developer | Full-Stack Engineer | 4+ Years Experience</p>
-                    <button
-                        class="py-3 my-5 cursor-pointer flex justify-center items-center w-[14rem] shadow-md bg-[#FEC110] text-white text-xl group hover:bg-white hover:text-[#feb633] border border-[#feb633] transition ease-in-out delay-150 duration-300">
-                        Hire Me
-                    </button>
-                </div>
+    @include('navbar')
+    {{-- <div class="hidden"> --}}
 
-                <div class="">
-                    <img src="{{ asset('images/hero_img-1.png') }}" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Hero -->
+        <section class="bg-[#fbfbfb]" id="home">
+            <div class="w-full h-[45rem] md:h-screen container mx-auto">
+                <div class="grid md:grid-cols-2 md:place-items-center text-[#32333c] w-full h-full">
+                    <div class="flex flex-col px-4 space-y-4 justify-center items-center md:items-start">
+                        <p class="text-2xl md:text-4xl font-bold mt-20 md:mt-0">Muhammed Riyas A</p>
+                        <p class="text-center md:text-left">React & Laravel Developer | Full-Stack Engineer | 4+ Years
+                            Experience</p>
+                        <a href="#contact"
+                            class="py-3 my-5 cursor-pointer flex justify-center items-center w-[14rem] shadow-md bg-[#FEC110] text-white text-xl group hover:bg-white hover:text-[#feb633] border border-[#feb633] transition ease-in-out delay-150 duration-300">
+                            Hire Me
+                        </a>
+                    </div>
 
-    <!-- About Me -->
-    <section class="container mx-auto mt-10 md:my-20 md:px-10">
-        <div class="w-full md:flex justify-center items-center gap-x-2">
-            <div class="bg-cover bg-center py-16 px-6 w-full relative md:translate-x-[10rem]">
-                <img class="" src="{{ asset('images/about_shap_bg.png') }}" alt="">
-                <div
-                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-2 flex flex-col gap-2">
-                    <h2 class="text-[#32333c] text-4xl font-bold text-center">About Me</h2>
-                    <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
+                    <div class="">
+                        <img src="{{ asset('images/hero_img-1.png') }}" alt="">
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="w-full px-4">
-                <p class="text-justify text-[#8a91ac] leading-relaxed">
-                    Full-Stack Developer with 4+ years of experience building scalable web applications using Laravel
-                    for the backend and React for dynamic,
-                    responsive frontends. Skilled in REST API development, Flutter mobile apps, and real-time
-                    applications with Firebase. Known for writing clean,
-                    maintainable code and collaborating in Agile teams. Open to international roles focused on Laravel,
-                    React, or full-stack development.
-                </p>
+        <!-- About Me -->
+        <section class="container mx-auto mt-10 md:my-20 md:px-10 scroll-mt-52" id="about">
+            <div class="w-full md:flex justify-center items-center gap-x-2">
+                <div class="bg-cover bg-center py-8 md:py-16 px-6 w-full relative md:translate-x-[10rem]">
+                    <img class="" src="{{ asset('images/about_shap_bg.png') }}" alt="">
+                    <div
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-2 flex flex-col gap-2">
+                        <h2 class="text-[#32333c] text-4xl font-bold text-center">About Me</h2>
+                        <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
+                    </div>
+                </div>
 
-                <div class="flex gap-x-5 items-center">
-                    <button
-                        class="py-3 my-5 cursor-pointer flex justify-center items-center w-[14rem] shadow-md bg-[#feb633] text-white border border-[#feb633] group hover:bg-white hover:text-[#feb633] transition ease-in-out delay-150 duration-300">
-                        View Works
-                    </button>
+                <div class="w-full px-4">
+                    <p class="text-justify text-[#8a91ac] leading-relaxed">
+                        Full-Stack Developer with 4+ years of experience building scalable web applications using Laravel
+                        for the backend and React for dynamic,
+                        responsive frontends. Skilled in REST API development, Flutter mobile apps, and real-time
+                        applications with Firebase. Known for writing clean,
+                        maintainable code and collaborating in Agile teams. Open to international roles focused on Laravel,
+                        React, or full-stack development.
+                    </p>
 
-                    <button
-                        class="py-3 my-5 cursor-pointer flex justify-center items-center w-[14rem] shadow-md bg-white text-[#feb633] border border-[#feb633] group hover:bg-[#feb633] hover:text-white transition ease-in-out delay-150 duration-300">
-                        Download CV
-                    </button>
+                    <div class="flex gap-x-5 items-center">
+                        <button
+                            class="py-3 my-5 cursor-pointer flex justify-center items-center w-[14rem] shadow-md bg-[#feb633] text-white border border-[#feb633] group hover:bg-white hover:text-[#feb633] transition ease-in-out delay-150 duration-300">
+                            View Works
+                        </button>
+
+                        <button
+                            class="py-3 my-5 cursor-pointer flex justify-center items-center w-[14rem] shadow-md bg-white text-[#feb633] border border-[#feb633] group hover:bg-[#feb633] hover:text-white transition ease-in-out delay-150 duration-300">
+                            Download CV
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experiences and Education -->
-    <section class="container mx-auto my-10 md:my-20 hidden" x-data="{ activeTab: 'experience' }">
-        <div class="flex flex-col justify-center items-center gap-2">
-            <h2 class="text-center text-[#32333c] text-4xl font-bold capitalize">
-                People i've worked with
-            </h2>
-            <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
-        </div>
-
-        <div class="flex justify-center gap-x-5 py-8">
-            <button @click="activeTab = 'experience'; localStorage.setItem('activeTab', 'experience')"
-                class="text-lg cursor-pointer"
-                :class="activeTab === 'experience' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
-                Experience
-            </button>
-
-            <button @click="activeTab = 'education'; localStorage.setItem('activeTab', 'education')"
-                class="text-lg cursor-pointer" :class="activeTab === 'education' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
-                Education
-            </button>
-        </div>
-
-        <!-- Experience -->
-        <div x-show="activeTab === 'experience'" x-transition:enter="transition duration-500 delay-500 ease-out"
-            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
-            x-transition:leave="transition duration-300 ease-in" x-transition:leave-end="opacity-0 scale-95"
-            class="flex w-full flex-col items-center justify-center">
-            <div class="relative flex w-full items-center justify-center gap-x-10">
-                <div class="absolute -translate-x-56">
-                    <h2 class="text-xl">INFOLKS PVT LTD</h2>
-                    <p class="text-[#32333c] italic">Full Stack Developer</p>
-                </div>
-                <div
-                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                    <p>Present</p>
-                    <p>|</p>
-                    <p>2021</p>
-                </div>
-            </div>
-
-            <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
-
-            <div class="relative flex w-full items-center justify-center gap-x-10">
-                <div class="absolute translate-x-[23rem]">
-                    <h2 class="text-xl">FLEMING EMBEDDED AND SOFTWARE SOLUTIONS</h2>
-                    <p class="text-[#32333c] italic">Python Intern</p>
-                </div>
-                <div
-                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                    <p>2015</p>
-                    <p>|</p>
-                    <p>2020</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Education -->
-        <div x-show="activeTab === 'education'" x-transition:enter="transition duration-500 delay-500 ease-out"
-            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
-            x-transition:leave="transition ease-in" x-transition:leave-start="opacity-100 scale-100"
-            x-transition:leave-end="opacity-0 scale-95" class="flex w-full flex-col items-center justify-center">
-
-            <div class="relative flex w-full items-center justify-center gap-x-10">
-                <div class="absolute -translate-x-60">
-                    <h2 class="text-xl">Central University of Kerala</h2>
-                    <p class="text-[#32333c] italic">MSC Computer Science</p>
-                </div>
-                <div
-                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                    <p>2021</p>
-                    <p>|</p>
-                    <p>2019</p>
-                </div>
-            </div>
-
-            <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
-
-            <div class="relative flex w-full items-center justify-center gap-x-10">
-                <div class="absolute translate-x-56">
-                    <h2 class="text-xl">MES College Ponnani</h2>
-                    <p class="text-[#32333c] italic">BSC Computer Science</p>
-                </div>
-                <div
-                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                    <p>2015</p>
-                    <p>|</p>
-                    <p>2018</p>
-                </div>
-            </div>
-
-            <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
-
-            <div class="relative flex w-full items-center justify-center gap-x-10">
-                <div class="absolute -translate-x-56">
-                    <h2 class="text-xl">KHSS Kumaramputhur</h2>
-                    <p class="text-[#32333c] italic">Plus Two</p>
-                </div>
-                <div
-                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                    <p>2015</p>
-                    <p>|</p>
-                    <p>2013</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section class="container mx-auto my-10 md:my-20 md:px-10">
-        <div class="flex flex-col justify-center items-center gap-2">
-            <h2 class="text-center text-[#32333c] text-4xl font-bold">
-                Services
-            </h2>
-            <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
-        </div>
-
-        <div class="text-center py-5">What I do.</div>
-
-        <div class="grid md:grid-cols-3 place-items-center px-10">
-            <div
-                class="w-full border border-gray-300 shadow-md flex flex-col py-10 px-10 gap-2 transition ease-in-out duration-300 group h-fit md:h-[23rem] hover:bg-[#FEC110]">
-                <h2
-                    class="uppercase pb-5 font-semibold text-lg">
-                    web design
-                </h2>
-                <p
-                    class="text-[#8a91ac] pb-5 text-justify group-hover:text-white">
-                    I develop full-stack web applications using Laravel and React, integrating RESTful APIs, real-time
-                    features with Firebase,
-                    and secure user authentication. From concept to deployment, I design scalable and maintainable
-                    solutions that solve real
-                    business problems, including ticketing systems, HR panels, and e-commerce platforms.
-                </p>
-            </div>
-            <div
-                class="w-full border border-gray-300 shadow-md flex flex-col py-10 px-10 gap-2 transition ease-in-out duration-300 group h-fit md:h-[23rem] hover:bg-[#FEC110]">
-                <h2
-                    class="uppercase pb-5 font-semibold text-lg">
-                    frontend
-                </h2>
-                <p
-                    class="text-[#8a91ac] pb-5 text-justify group-hover:text-white">
-                    I craft responsive, user-friendly interfaces using React.js, Tailwind CSS, Bootstrap, and Alpine.js.
-                    My focus is on building clean UI components that enhance user experience and performance across all
-                    devices.
-                    Whether it's a dynamic dashboard or an interactive web portal, I ensure pixel-perfect designs and
-                    smooth interactivity.
-                </p>
-            </div>
-            <div
-                class="w-full border border-gray-300 shadow-md flex flex-col py-10 px-10 gap-2 transition ease-in-out duration-300 group h-fit md:h-[23rem] hover:bg-[#FEC110]">
-                <h2
-                    class="uppercase pb-5 font-semibold text-lg">
-                    backend
-                </h2>
-                <p
-                    class="text-[#8a91ac] pb-5 text-justify group-hover:text-white">
-                    I build robust and scalable backends using Laravel and PHP, designing optimized database structures
-                    with MySQL and SQLite.
-                    I implement clean architecture and efficient API communication to ensure high performance and
-                    maintainability.
-                    I also integrate third-party services and handle complex role-based access systems.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="my-10 md:my-20 bg-[#fbfbfb] md:px-10" x-data="{ projectTab: 'all' }">
-        <div class="container mx-auto">
-            <div class="flex flex-col justify-center items-center gap-2 py-5">
+        <!-- Experiences and Education -->
+        <section class="container mx-auto my-10 md:my-20 scroll-mt-52 hidden" x-data="{ activeTab: 'experience' }" id="experience">
+            <div class="flex flex-col justify-center items-center gap-2">
                 <h2 class="text-center text-[#32333c] text-4xl font-bold capitalize">
-                    Projects
+                    People i've worked with
                 </h2>
                 <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
             </div>
 
             <div class="flex justify-center gap-x-5 py-8">
-                <button @click="projectTab = 'all'; localStorage.setItem('projectTab', 'all')"
+                <button @click="activeTab = 'experience'; localStorage.setItem('activeTab', 'experience')"
                     class="text-lg cursor-pointer"
-                    :class="projectTab === 'all' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
-                    All
+                    :class="activeTab === 'experience' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
+                    Experience
                 </button>
 
-                <button @click="projectTab = 'application'; localStorage.setItem('projectTab', 'application')"
-                    class="text-lg cursor-pointer"
-                    :class="projectTab === 'application' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
-                    Applications
-                </button>
-
-                <button @click="projectTab = 'website'; localStorage.setItem('projectTab', 'website')"
-                    class="text-lg cursor-pointer"
-                    :class="projectTab === 'website' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
-                    Websites
+                <button @click="activeTab = 'education'; localStorage.setItem('activeTab', 'education')"
+                    class="text-lg cursor-pointer" :class="activeTab === 'education' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
+                    Education
                 </button>
             </div>
 
-            <!-- All -->
-            <div x-show="projectTab === 'all'" class="grid md:grid-cols-4 place-items-center px-4 gap-4">
+            <!-- Experience -->
+            <div x-show="activeTab === 'experience'" x-transition:enter="transition duration-500 delay-500 ease-out"
+                x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition duration-300 ease-in" x-transition:leave-end="opacity-0 scale-95"
+                class="flex w-full flex-col items-center justify-center">
+                <div class="relative flex w-full items-center justify-center gap-x-10">
+                    <div class="absolute -translate-x-56">
+                        <h2 class="text-xl">INFOLKS PVT LTD</h2>
+                        <p class="text-[#32333c] italic">Full Stack Developer</p>
+                    </div>
+                    <div
+                        class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                        <p>Present</p>
+                        <p>|</p>
+                        <p>2021</p>
+                    </div>
+                </div>
+
+                <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
+
+                <div class="relative flex w-full items-center justify-center gap-x-10">
+                    <div class="absolute translate-x-[23rem]">
+                        <h2 class="text-xl">FLEMING EMBEDDED AND SOFTWARE SOLUTIONS</h2>
+                        <p class="text-[#32333c] italic">Python Intern</p>
+                    </div>
+                    <div
+                        class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                        <p>2015</p>
+                        <p>|</p>
+                        <p>2020</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div x-show="activeTab === 'education'" x-transition:enter="transition duration-500 delay-500 ease-out"
+                x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-in" x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-95" class="flex w-full flex-col items-center justify-center">
+
+                <div class="relative flex w-full items-center justify-center gap-x-10">
+                    <div class="absolute -translate-x-60">
+                        <h2 class="text-xl">Central University of Kerala</h2>
+                        <p class="text-[#32333c] italic">MSC Computer Science</p>
+                    </div>
+                    <div
+                        class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                        <p>2021</p>
+                        <p>|</p>
+                        <p>2019</p>
+                    </div>
+                </div>
+
+                <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
+
+                <div class="relative flex w-full items-center justify-center gap-x-10">
+                    <div class="absolute translate-x-56">
+                        <h2 class="text-xl">MES College Ponnani</h2>
+                        <p class="text-[#32333c] italic">BSC Computer Science</p>
+                    </div>
+                    <div
+                        class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                        <p>2015</p>
+                        <p>|</p>
+                        <p>2018</p>
+                    </div>
+                </div>
+
+                <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
+
+                <div class="relative flex w-full items-center justify-center gap-x-10">
+                    <div class="absolute -translate-x-56">
+                        <h2 class="text-xl">KHSS Kumaramputhur</h2>
+                        <p class="text-[#32333c] italic">Plus Two</p>
+                    </div>
+                    <div
+                        class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                        <p>2015</p>
+                        <p>|</p>
+                        <p>2013</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="container mx-auto my-10 md:my-20 md:px-10 scroll-mt-52" id="service">
+            <div class="flex flex-col justify-center items-center gap-2">
+                <h2 class="text-center text-[#32333c] text-4xl font-bold">
+                    Services
+                </h2>
+                <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
+            </div>
+
+            <div class="text-center py-5">What I do.</div>
+
+            <div class="grid md:grid-cols-3 place-items-center px-4 md:px-10">
                 <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        it support ticket system
+                    class="w-full border border-gray-300 shadow-md flex flex-col py-10 px-10 gap-2 transition ease-in-out duration-300 group h-fit md:h-[23rem] hover:bg-[#FEC110]">
+                    <h2 class="uppercase pb-5 font-semibold text-lg">
+                        web design
                     </h2>
+                    <p class="text-[#8a91ac] pb-5 text-justify group-hover:text-white">
+                        I develop full-stack web applications using Laravel and React, integrating RESTful APIs, real-time
+                        features with Firebase,
+                        and secure user authentication. From concept to deployment, I design scalable and maintainable
+                        solutions that solve real
+                        business problems, including ticketing systems, HR panels, and e-commerce platforms.
+                    </p>
                 </div>
                 <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <a href="{{ route('project.hr') }}" class="capitalize">
-                        hr panel
+                    class="w-full border border-gray-300 shadow-md flex flex-col py-10 px-10 gap-2 transition ease-in-out duration-300 group h-fit md:h-[23rem] hover:bg-[#FEC110]">
+                    <h2 class="uppercase pb-5 font-semibold text-lg">
+                        frontend
+                    </h2>
+                    <p class="text-[#8a91ac] pb-5 text-justify group-hover:text-white">
+                        I craft responsive, user-friendly interfaces using React.js, Tailwind CSS, Bootstrap, and Alpine.js.
+                        My focus is on building clean UI components that enhance user experience and performance across all
+                        devices.
+                        Whether it's a dynamic dashboard or an interactive web portal, I ensure pixel-perfect designs and
+                        smooth interactivity.
+                    </p>
+                </div>
+                <div
+                    class="w-full border border-gray-300 shadow-md flex flex-col py-10 px-10 gap-2 transition ease-in-out duration-300 group h-fit md:h-[23rem] hover:bg-[#FEC110]">
+                    <h2 class="uppercase pb-5 font-semibold text-lg">
+                        backend
+                    </h2>
+                    <p class="text-[#8a91ac] pb-5 text-justify group-hover:text-white">
+                        I build robust and scalable backends using Laravel and PHP, designing optimized database structures
+                        with MySQL and SQLite.
+                        I implement clean architecture and efficient API communication to ensure high performance and
+                        maintainability.
+                        I also integrate third-party services and handle complex role-based access systems.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="my-10 md:my-20 bg-[#fbfbfb] md:px-10 scroll-mt-52" x-data="{ projectTab: 'all' }" id="project">
+            <div class="container mx-auto">
+                <div class="flex flex-col justify-center items-center gap-2 py-5">
+                    <h2 class="text-center text-[#32333c] text-4xl font-bold capitalize">
+                        Projects
+                    </h2>
+                    <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
+                </div>
+
+                <div class="flex justify-center gap-x-5 py-8">
+                    <button @click="projectTab = 'all'; localStorage.setItem('projectTab', 'all')"
+                        class="text-lg cursor-pointer"
+                        :class="projectTab === 'all' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
+                        All
+                    </button>
+
+                    <button @click="projectTab = 'application'; localStorage.setItem('projectTab', 'application')"
+                        class="text-lg cursor-pointer"
+                        :class="projectTab === 'application' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
+                        Applications
+                    </button>
+
+                    <button @click="projectTab = 'website'; localStorage.setItem('projectTab', 'website')"
+                        class="text-lg cursor-pointer"
+                        :class="projectTab === 'website' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
+                        Websites
+                    </button>
+                </div>
+
+                <!-- All -->
+                <div x-show="projectTab === 'all'" class="grid md:grid-cols-4 place-items-center px-4 gap-4">
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            it support ticket system
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <a href="{{ route('project.hr') }}" class="capitalize">
+                            hr panel
+                        </a>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            kitchen managment system
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            online food ordering system
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            interview panel
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            online hall booking system
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            infolksgroup
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            infolks
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            medrays
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            webfolks
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            dataways
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            medfolks
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Applications -->
+                <div x-show="projectTab === 'application'" class="grid md:grid-cols-4 place-items-center px-4 gap-4">
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            it support ticket system
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            hr panel
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            kitchen managment system
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            online food ordering system
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            interview panel
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            online hall booking system
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Websites -->
+                <div x-show="projectTab === 'website'" class="grid md:grid-cols-4 place-items-center px-4 gap-4">
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            infolksgroup
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            infolks
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            medrays
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            webfolks
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            dataways
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            medfolks
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="my-10 md:px-10 container mx-auto scroll-mt-52" id="contact">
+            <div class="flex flex-col justify-center items-center gap-2">
+                <h2 class="text-center text-[#32333c] text-4xl font-bold capitalize">
+                    Contact Me
+                </h2>
+                <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
+            </div>
+
+            <div class="py-10 grid md:grid-cols-3 gap-5 px-4">
+                <div class="flex flex-col gap-5 w-full text-[#727b86]">
+                    <h2 class="font-semibold text-black text-xl">Contact Info</h2>
+                    <div class="flex items-center gap-2 py-2">
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6">
+                                <path fill-rule="evenodd"
+                                    d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                        </p>
+                        <p>
+                            Palakkad, Kerala, India
+                        </p>
+                    </div>
+
+                    <div class="flex items-center gap-2 py-2">
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6">
+                                <path
+                                    d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                                <path
+                                    d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                            </svg>
+
+                        </p>
+                        <p>
+                            riyasmuhammed306@gmail.com
+                        </p>
+                    </div>
+
+                    <div class="flex items-center gap-2 py-2">
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6">
+                                <path fill-rule="evenodd"
+                                    d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                        </p>
+                        <p>
+                            8089999424
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-2 py-2">
+                        <p class="text-black text-xl">
+                            Follow me
+                        </p>
+                        <div class="flex gap-x-2 items-center">
+                            <p><i class="fa-brands w-6 h-6 hover:text-[#FEC110] fa-instagram"></i></p>
+                            <p><i class="fa-brands w-6 h-6 hover:text-[#FEC110] fa-facebook"></i></p>
+                            <p><i class="fa-brands w-6 h-6 hover:text-[#FEC110] fa-x-twitter"></i></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-2 md:px-10 w-full">
+                    <div class="w-full flex flex-col gap-2 pb-4">
+                        <label for="name">
+                            Name
+                        </label>
+                        <input id="name" type="text"
+                            class="w-full px-4 border shadow-md rounded-md border-transparent py-2"
+                            placeholder="Type your name">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 py-4">
+                        <div class="w-full flex flex-col gap-2">
+                            <label for="phone">
+                                Phone Number
+                            </label>
+                            <input id="phone" type="text"
+                                class="w-full px-4 border shadow-md rounded-md border-transparent py-2"
+                                placeholder="Type your number">
+                        </div>
+
+                        <div class="w-full flex flex-col gap-2">
+                            <label for="email">
+                                Email
+                            </label>
+                            <input id="email" type="text"
+                                class="w-full px-4 border shadow-md rounded-md border-transparent py-2"
+                                placeholder="Type your email">
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col gap-2 py-4">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="shadow-md rounded-md px-4" rows="6"
+                            placeholder="Type your message here"></textarea>
+                    </div>
+
+                    <button
+                        class="py-3 my-5 cursor-pointer flex justify-center items-center w-fit px-4 shadow-md bg-[#FEC110] text-white text-xl  hover:bg-black transition ease-in-out delay-150 duration-300">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="md:px-10 bg-[#f6f8fc]">
+            <footer class="container mx-auto py-10">
+                <div class="flex flex-col gap-5 justify-center items-center text-center px-10">
+                    <p>React & Laravel Developer | Full-Stack Engineer | 4+ Years Experience</p>
+                </div>
+
+                <div class="py-10 flex flex-wrap justify-center items-center gap-4">
+                    <a
+                        class="w-10 h-10 rounded-full shadow-md flex justify-center items-center cursor-pointer transition easse-in-out duration-300 hover:text-white hover:bg-[#FEC110]">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a
+                        class="w-10 h-10 rounded-full shadow-md flex justify-center items-center cursor-pointer transition easse-in-out duration-300 hover:text-white hover:bg-[#FEC110]">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a
+                        class="w-10 h-10 rounded-full shadow-md flex justify-center items-center cursor-pointer transition easse-in-out duration-300 hover:text-white hover:bg-[#FEC110]">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a
+                        class="w-10 h-10 rounded-full shadow-md flex justify-center items-center cursor-pointer transition easse-in-out duration-300 hover:text-white hover:bg-[#FEC110]">
+                        <i class="fa-brands fa-facebook"></i>
                     </a>
                 </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        kitchen managment system
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        online food ordering system
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        interview panel
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        online hall booking system
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        infolksgroup
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        infolks
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        medrays
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        webfolks
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        dataways
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        medfolks
-                    </h2>
-                </div>
-            </div>
-
-            <!-- Applications -->
-            <div x-show="projectTab === 'application'" class="grid md:grid-cols-4 place-items-center px-4 gap-4">
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        it support ticket system
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        hr panel
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        kitchen managment system
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        online food ordering system
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        interview panel
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        online hall booking system
-                    </h2>
-                </div>
-            </div>
-
-            <!-- Websites -->
-            <div x-show="projectTab === 'website'" class="grid md:grid-cols-4 place-items-center px-4 gap-4">
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        infolksgroup
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        infolks
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        medrays
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        webfolks
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        dataways
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        medfolks
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="my-10 md:px-10 container mx-auto"> 
-        <div class="flex flex-col justify-center items-center gap-2">
-            <h2 class="text-center text-[#32333c] text-4xl font-bold capitalize">
-                Contact Me
-            </h2>
-            <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
-        </div>
-
-        <div class="py-10 grid md:grid-cols-3 gap-5">
-            <div class="flex flex-col gap-5 w-full text-[#727b86]">
-                <h2 class="font-semibold text-black text-xl">Contact Info</h2>
-                <div class="flex items-center gap-2 py-2">
-                    <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="size-6">
-                            <path fill-rule="evenodd"
-                                d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-                                clip-rule="evenodd" />
-                        </svg>
-
-                    </p>
-                    <p>
-                        Palakkad, Kerala, India
-                    </p>
-                </div>
-
-                <div class="flex items-center gap-2 py-2">
-                    <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="size-6">
-                            <path
-                                d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
-                            <path
-                                d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
-                        </svg>
-
-                    </p>
-                    <p>
-                        riyasmuhammed306@gmail.com
-                    </p>
-                </div>
-
-                <div class="flex items-center gap-2 py-2">
-                    <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                            class="size-6">
-                            <path fill-rule="evenodd"
-                                d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
-                                clip-rule="evenodd" />
-                        </svg>
-
-                    </p>
-                    <p>
-                        8089999424
-                    </p>
-                </div>
-
-                <div class="flex flex-col gap-2 py-2">
-                    <p class="text-black text-xl">
-                        Follow me
-                    </p>
-                    <div class="flex gap-x-2 items-center">
-                        <p><i class="fa-brands w-6 h-6 hover:text-[#FEC110] fa-instagram"></i></p>
-                        <p><i class="fa-brands w-6 h-6 hover:text-[#FEC110] fa-facebook"></i></p>
-                        <p><i class="fa-brands w-6 h-6 hover:text-[#FEC110] fa-x-twitter"></i></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-span-2 px-10 w-full">
-                <div class="w-full flex flex-col gap-2 pb-4">
-                    <label for="name">
-                        Name
-                    </label>
-                    <input id="name" type="text"
-                        class="w-full px-4 border shadow-md rounded-md border-transparent py-2"
-                        placeholder="Type your name">
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 py-4">
-                    <div class="w-full flex flex-col gap-2">
-                        <label for="phone">
-                            Phone Number
-                        </label>
-                        <input id="phone" type="text"
-                            class="w-full px-4 border shadow-md rounded-md border-transparent py-2"
-                            placeholder="Type your number">
-                    </div>
-
-                    <div class="w-full flex flex-col gap-2">
-                        <label for="email">
-                            Email
-                        </label>
-                        <input id="email" type="text"
-                            class="w-full px-4 border shadow-md rounded-md border-transparent py-2"
-                            placeholder="Type your email">
-                    </div>
-                </div>
-
-                <div class="w-full flex flex-col gap-2 py-4">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" class="shadow-md rounded-md px-4" rows="6"
-                        placeholder="Type your message here"></textarea>
-                </div>
-
-                <button
-                    class="py-3 my-5 cursor-pointer flex justify-center items-center w-fit px-4 shadow-md bg-[#FEC110] text-white text-xl  hover:bg-black transition ease-in-out delay-150 duration-300">
-                    Send Message
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <section class="md:px-10 bg-[#f6f8fc]">
-        <footer class="container mx-auto py-10">
-            <div class="flex flex-col gap-5 justify-center items-center text-center px-10">
-                <p>React & Laravel Developer | Full-Stack Engineer | 4+ Years Experience</p>
-            </div>
-
-            <div class="py-10 flex flex-wrap justify-center items-center gap-4">
-                <a class="w-10 h-10 rounded-full shadow-md flex justify-center items-center cursor-pointer transition easse-in-out duration-300 hover:text-white hover:bg-[#FEC110]">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a class="w-10 h-10 rounded-full shadow-md flex justify-center items-center cursor-pointer transition easse-in-out duration-300 hover:text-white hover:bg-[#FEC110]">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-                <a class="w-10 h-10 rounded-full shadow-md flex justify-center items-center cursor-pointer transition easse-in-out duration-300 hover:text-white hover:bg-[#FEC110]">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a class="w-10 h-10 rounded-full shadow-md flex justify-center items-center cursor-pointer transition easse-in-out duration-300 hover:text-white hover:bg-[#FEC110]">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div>
-        </footer>
-    </section>
+            </footer>
+        </section>
+    {{-- </div> --}}
 </body>
 
 </html>
