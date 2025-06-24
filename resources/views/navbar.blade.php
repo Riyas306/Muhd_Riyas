@@ -3,7 +3,7 @@
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="text-xl font-bold text-[#32333c]">MyPortfolio</div>
             <div class="hidden md:flex space-x-10 py-3">
-                <a href="#home"
+                <a href="/"
                     class="hover:text-[#feca34] font-semibold transition duration-200 text-[#32333c] group relative inline-block">
                     Home
                     <span
