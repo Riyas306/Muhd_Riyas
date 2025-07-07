@@ -25,7 +25,7 @@
 <body class="">
     @include('navbar')
     <!-- Hero -->
-    <section class="bg-[#fbfbfb]" id="/">
+    <section class="bg-[#fbfbfb]" id="home">
         <div class="w-full h-[45rem] md:h-screen container mx-auto">
             <div class="grid md:grid-cols-2 md:place-items-center text-[#32333c] w-full h-full">
                 <div class="flex flex-col px-4 space-y-4 justify-center items-center md:items-start">
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="">
-                    <img src="{{ asset('images/hero_img-1.png') }}" alt="">
+                    <img src="{{ asset('images/hero_img-1.png') }}" class="w-[40rem] mt-10" alt="">
                 </div>
             </div>
         </div>
@@ -77,6 +77,114 @@
                         class="py-3 my-5 rounded-full cursor-pointer flex justify-center items-center w-[14rem] shadow-md bg-white text-[#feb633] border border-[#feb633] group hover:bg-[#feb633] hover:text-white transition ease-in-out delay-150 duration-300">
                         Download CV
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences and Education -->
+    <section class="container mx-auto my-10 md:my-20 scroll-mt-52 hidden md:block" x-data="{ activeTab: 'experience' }"
+        id="experience">
+        <div class="flex flex-col justify-center items-center gap-2">
+            <h2 class="text-center text-[#32333c] text-4xl font-bold capitalize">
+                People i've worked with
+            </h2>
+            <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
+        </div>
+
+        <div class="flex justify-center gap-x-5 py-8">
+            <button @click="activeTab = 'experience'; localStorage.setItem('activeTab', 'experience')"
+                class="text-lg cursor-pointer"
+                :class="activeTab === 'experience' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
+                Experience
+            </button>
+
+            <button @click="activeTab = 'education'; localStorage.setItem('activeTab', 'education')"
+                class="text-lg cursor-pointer" :class="activeTab === 'education' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
+                Education
+            </button>
+        </div>
+
+        <!-- Experience -->
+        <div x-show="activeTab === 'experience'" x-transition:enter="transition duration-500 delay-500 ease-out"
+            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition duration-300 ease-in" x-transition:leave-end="opacity-0 scale-95"
+            class="flex w-full flex-col items-center justify-center">
+            <div class="relative flex w-full items-center justify-center gap-x-10">
+                <div class="absolute -translate-x-56">
+                    <h2 class="text-xl">INFOLKS PVT LTD</h2>
+                    <p class="text-[#32333c] italic">Full Stack Developer</p>
+                </div>
+                <div
+                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                    <p>Present</p>
+                    <p>|</p>
+                    <p>2021</p>
+                </div>
+            </div>
+
+            <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
+
+            <div class="relative flex w-full items-center justify-center gap-x-10">
+                <div class="absolute translate-x-[23rem]">
+                    <h2 class="text-xl">FLEMING EMBEDDED AND SOFTWARE SOLUTIONS</h2>
+                    <p class="text-[#32333c] italic">Python Intern</p>
+                </div>
+                <div
+                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                    <p>2015</p>
+                    <p>|</p>
+                    <p>2020</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div x-show="activeTab === 'education'" x-transition:enter="transition duration-500 delay-500 ease-out"
+            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95" class="flex w-full flex-col items-center justify-center">
+
+            <div class="relative flex w-full items-center justify-center gap-x-10">
+                <div class="absolute -translate-x-60">
+                    <h2 class="text-xl">Central University of Kerala</h2>
+                    <p class="text-[#32333c] italic">MSC Computer Science</p>
+                </div>
+                <div
+                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                    <p>2021</p>
+                    <p>|</p>
+                    <p>2019</p>
+                </div>
+            </div>
+
+            <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
+
+            <div class="relative flex w-full items-center justify-center gap-x-10">
+                <div class="absolute translate-x-56">
+                    <h2 class="text-xl">MES College Ponnani</h2>
+                    <p class="text-[#32333c] italic">BSC Computer Science</p>
+                </div>
+                <div
+                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                    <p>2015</p>
+                    <p>|</p>
+                    <p>2018</p>
+                </div>
+            </div>
+
+            <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
+
+            <div class="relative flex w-full items-center justify-center gap-x-10">
+                <div class="absolute -translate-x-56">
+                    <h2 class="text-xl">KHSS Kumaramputhur</h2>
+                    <p class="text-[#32333c] italic">Plus Two</p>
+                </div>
+                <div
+                    class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
+                    <p>2015</p>
+                    <p>|</p>
+                    <p>2013</p>
                 </div>
             </div>
         </div>
@@ -167,80 +275,94 @@
             </div>
 
             <!-- All -->
-            <div x-show="projectTab === 'all'"
-                class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center px-4 gap-4">
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        it support ticket system
-                    </h2>
+            <div class="" x-show="projectTab === 'all'" x-data="{ open: false }">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center px-4 gap-4">
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            it support ticket system
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <a href="{{ route('project.hr') }}" class="capitalize">
+                            hr panel
+                        </a>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            kitchen managment system
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            online food ordering system
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            interview panel
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            online hall booking system
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            infolksgroup
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            infolks
+                        </h2>
+                    </div>
                 </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <a href="{{ route('project.hr') }}" class="capitalize">
-                        hr panel
-                    </a>
+
+                <div x-show="open"
+                    class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center px-4 gap-4 mt-4">
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            medrays
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            webfolks
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            dataways
+                        </h2>
+                    </div>
+                    <div
+                        class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
+                        <h2 class="capitalize">
+                            medfolks
+                        </h2>
+                    </div>
                 </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        kitchen managment system
-                    </h2>
+                <!-- Toggle Button -->
+                <div class="flex justify-center items-center">
+                    <p @click="open = !open"
+                        class="cursor-pointer text-[#feb633] font-semibold my-4 hover:underline">
+                        <span x-text="open ? 'Show Less' : 'Show More'"></span>
+                    </p>
                 </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        online food ordering system
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        interview panel
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        online hall booking system
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        infolksgroup
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        infolks
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        medrays
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        webfolks
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        dataways
-                    </h2>
-                </div>
-                <div
-                    class="flex justify-center items-center border rounded-md border-[#feb633] shadow-md w-full h-[15rem]">
-                    <h2 class="capitalize">
-                        medfolks
-                    </h2>
-                </div>
+
+
             </div>
 
             <!-- Applications -->
@@ -398,166 +520,57 @@
             </div>
 
             <div class="col-span-2 w-full text-sm lg:text-base">
-                <div class="w-full flex flex-col gap-2 pb-4">
-                    <label for="name">
-                        Name
-                    </label>
-                    <input id="name" type="text"
-                        class="w-full px-4 border shadow-md rounded-md border-transparent py-2 focus:outline-none focus-within:ring-2 focus:ring-[#FEC110]"
-                        placeholder="Type your name">
-                </div>
-
-                <div class="grid lg:grid-cols-2 gap-4 py-4">
-                    <div class="w-full flex flex-col gap-2">
-                        <label for="phone">
-                            Phone Number
+                <form action="">
+                    <div class="w-full flex flex-col gap-2 pb-4">
+                        <label for="name">
+                            Name
                         </label>
-                        <input id="phone" type="text"
+                        <input id="name" type="text"
                             class="w-full px-4 border shadow-md rounded-md border-transparent py-2 focus:outline-none focus-within:ring-2 focus:ring-[#FEC110]"
-                            placeholder="Type your number">
+                            placeholder="Type your name" required>
                     </div>
-
-                    <div class="w-full flex flex-col gap-2">
-                        <label for="email">
-                            Email
-                        </label>
-                        <input id="email" type="text"
-                            class="w-full px-4 border shadow-md rounded-md border-transparent py-2 focus:outline-none focus-within:ring-2 focus:ring-[#FEC110]"
-                            placeholder="Type your email">
+    
+                    <div class="grid lg:grid-cols-2 gap-4 py-4">
+                        <div class="w-full flex flex-col gap-2">
+                            <label for="phone">
+                                Phone Number
+                            </label>
+                            <input id="phone" type="text"
+                                class="w-full px-4 border shadow-md rounded-md border-transparent py-2 focus:outline-none focus-within:ring-2 focus:ring-[#FEC110]"
+                                placeholder="Type your number" required>
+                        </div>
+    
+                        <div class="w-full flex flex-col gap-2">
+                            <label for="email">
+                                Email
+                            </label>
+                            <input id="email" type="text"
+                                class="w-full px-4 border shadow-md rounded-md border-transparent py-2 focus:outline-none focus-within:ring-2 focus:ring-[#FEC110]"
+                                placeholder="Type your email" required>
+                        </div>
                     </div>
-                </div>
-
-                <div class="w-full flex flex-col gap-2 py-4">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message"
-                        class="shadow-md rounded-md px-4 py-1 focus:outline-none focus-within:ring-2 focus:ring-[#FEC110]" rows="6"
-                        placeholder="Type your message here"></textarea>
-                </div>
-
-                <button
-                    class="py-3 my-5 cursor-pointer flex justify-center items-center w-fit px-4 lg:px-6 shadow-md bg-[#FEC110] text-white rounded-full hover:bg-black transition ease-in-out delay-150 duration-300">
-                    Send Message
-                </button>
+    
+                    <div class="w-full flex flex-col gap-2 py-4">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message"
+                            class="shadow-md rounded-md px-4 py-1 focus:outline-none focus-within:ring-2 focus:ring-[#FEC110]" rows="6"
+                            placeholder="Type your message here"></textarea>
+                    </div>
+    
+                    <button type="submit"
+                        class="py-3 my-5 cursor-pointer flex justify-center items-center w-fit px-4 lg:px-6 shadow-md bg-[#FEC110] text-white rounded-full hover:bg-black transition ease-in-out delay-150 duration-300">
+                        Send Message
+                    </button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     @include('footer')
+
+
     <div class="hidden">
-
-
-
-        <!-- Experiences and Education -->
-        <section class="container mx-auto my-10 md:my-20 scroll-mt-52 hidden md:block" x-data="{ activeTab: 'experience' }"
-            id="experience">
-            <div class="flex flex-col justify-center items-center gap-2">
-                <h2 class="text-center text-[#32333c] text-4xl font-bold capitalize">
-                    People i've worked with
-                </h2>
-                <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
-            </div>
-
-            <div class="flex justify-center gap-x-5 py-8">
-                <button @click="activeTab = 'experience'; localStorage.setItem('activeTab', 'experience')"
-                    class="text-lg cursor-pointer"
-                    :class="activeTab === 'experience' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
-                    Experience
-                </button>
-
-                <button @click="activeTab = 'education'; localStorage.setItem('activeTab', 'education')"
-                    class="text-lg cursor-pointer"
-                    :class="activeTab === 'education' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
-                    Education
-                </button>
-            </div>
-
-            <!-- Experience -->
-            <div x-show="activeTab === 'experience'" x-transition:enter="transition duration-500 delay-500 ease-out"
-                x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
-                x-transition:leave="transition duration-300 ease-in" x-transition:leave-end="opacity-0 scale-95"
-                class="flex w-full flex-col items-center justify-center">
-                <div class="relative flex w-full items-center justify-center gap-x-10">
-                    <div class="absolute -translate-x-56">
-                        <h2 class="text-xl">INFOLKS PVT LTD</h2>
-                        <p class="text-[#32333c] italic">Full Stack Developer</p>
-                    </div>
-                    <div
-                        class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                        <p>Present</p>
-                        <p>|</p>
-                        <p>2021</p>
-                    </div>
-                </div>
-
-                <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
-
-                <div class="relative flex w-full items-center justify-center gap-x-10">
-                    <div class="absolute translate-x-[23rem]">
-                        <h2 class="text-xl">FLEMING EMBEDDED AND SOFTWARE SOLUTIONS</h2>
-                        <p class="text-[#32333c] italic">Python Intern</p>
-                    </div>
-                    <div
-                        class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                        <p>2015</p>
-                        <p>|</p>
-                        <p>2020</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Education -->
-            <div x-show="activeTab === 'education'" x-transition:enter="transition duration-500 delay-500 ease-out"
-                x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
-                x-transition:leave="transition ease-in" x-transition:leave-start="opacity-100 scale-100"
-                x-transition:leave-end="opacity-0 scale-95" class="flex w-full flex-col items-center justify-center">
-
-                <div class="relative flex w-full items-center justify-center gap-x-10">
-                    <div class="absolute -translate-x-60">
-                        <h2 class="text-xl">Central University of Kerala</h2>
-                        <p class="text-[#32333c] italic">MSC Computer Science</p>
-                    </div>
-                    <div
-                        class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                        <p>2021</p>
-                        <p>|</p>
-                        <p>2019</p>
-                    </div>
-                </div>
-
-                <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
-
-                <div class="relative flex w-full items-center justify-center gap-x-10">
-                    <div class="absolute translate-x-56">
-                        <h2 class="text-xl">MES College Ponnani</h2>
-                        <p class="text-[#32333c] italic">BSC Computer Science</p>
-                    </div>
-                    <div
-                        class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                        <p>2015</p>
-                        <p>|</p>
-                        <p>2018</p>
-                    </div>
-                </div>
-
-                <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
-
-                <div class="relative flex w-full items-center justify-center gap-x-10">
-                    <div class="absolute -translate-x-56">
-                        <h2 class="text-xl">KHSS Kumaramputhur</h2>
-                        <p class="text-[#32333c] italic">Plus Two</p>
-                    </div>
-                    <div
-                        class="flex h-40 w-40 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                        <p>2015</p>
-                        <p>|</p>
-                        <p>2013</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
         <section class="md:hidden px-4 py-10" id="experience" x-data="{ activeTabMobile: 'experience' }">
             <div class="flex flex-col justify-center items-center gap-2">
                 <h2 class="text-center text-[#32333c] text-4xl font-bold capitalize">
