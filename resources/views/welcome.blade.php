@@ -190,6 +190,111 @@
         </div>
     </section>
 
+    <section class="md:hidden px-4 py-10" id="experience" x-data="{ activeTabMobile: 'experience' }">
+        <div class="flex flex-col justify-center items-center gap-2">
+            <h2 class="text-center text-[#32333c] text-4xl font-bold capitalize">
+                People i've worked with
+            </h2>
+            <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
+        </div>
+
+        <div class="flex justify-center gap-x-5 py-8">
+            <button @click="activeTabMobile = 'experience'; localStorage.setItem('activeTabMobile', 'experience')"
+                class="text-lg cursor-pointer"
+                :class="activeTabMobile === 'experience' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
+                Experience
+            </button>
+
+            <button @click="activeTabMobile = 'education'; localStorage.setItem('activeTabMobile', 'education')"
+                class="text-lg cursor-pointer"
+                :class="activeTabMobile === 'education' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
+                Education
+            </button>
+        </div>
+
+        <div x-show="activeTabMobile === 'experience'" x-transition:enter="transition duration-500 delay-500 ease-out"
+            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95">
+            <div class="flex gap-2">
+                <div class="flex w-fit flex-col items-center">
+                    <div class="flex justify-center items-center flex-col h-20 w-20 rounded-full bg-[#feb633] text-white text-xs">
+                        <p>Present</p>
+                        <p>|</p>
+                        <p>2021</p>
+                    </div>
+                    <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
+                </div>
+                <div class="py-5">
+                    <p>Infolks Pvt Ltd</p>
+                    <p class="text-gray-400 text-xs">Full Stack Developer</p>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <div class="flex w-fit flex-col items-center">
+                    <div class="flex justify-center items-center flex-col h-20 w-20 rounded-full bg-[#feb633] text-xs text-white">
+                        <p>6</p>
+                        <p>Months</p>
+                    </div>
+                </div>
+                <div class="py-5">
+                    <p>Fleming Software Solution</p>
+                    <p class="text-gray-400 text-xs">Python Intern</p>
+                </div>
+            </div>
+        </div>
+
+        <div x-show="activeTabMobile === 'education'" x-transition:enter="transition duration-500 delay-500 ease-out"
+            x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-95">
+            <div class="flex gap-2">
+                <div class="flex w-fit flex-col items-center">
+                    <div class="flex justify-center items-center flex-col h-20 w-20 rounded-full bg-[#feb633] text-white text-xs">
+                        <p>2021</p>
+                        <p>|</p>
+                        <p>2019</p>
+                    </div>
+                    <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
+                </div>
+                <div class="py-5">
+                    <p>Central University of Kerala</p>
+                    <p class="text-gray-400 text-xs">MSC Computer Science</p>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <div class="flex w-fit flex-col items-center">
+                    <div class="flex justify-center items-center flex-col h-20 w-20 rounded-full bg-[#feb633] text-xs text-white">
+                        <p>2018</p>
+                        <p>|</p>
+                        <p>2015</p>
+                    </div>
+                    <div class="h-20 w-0.5 bg-[#8a91ac]"></div>
+                </div>
+                <div class="py-5">
+                    <p>Mes College Ponnani</p>
+                    <p class="text-gray-400 text-xs">BSC Computer Science</p>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <div class="flex w-fit flex-col items-center">
+                    <div class="flex justify-center items-center flex-col h-20 w-20 rounded-full bg-[#feb633] text-xs text-white">
+                        <p>2015</p>
+                        <p>|</p>
+                        <p>2013</p>
+                    </div>
+                </div>
+                <div class="py-5">
+                    <p>KHSS Kumaramputhur</p>
+                    <p class="text-gray-400 text-xs">Computer Science</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services -->
     <section class="container mx-auto my-10 md:my-20 xl:px-10 scroll-mt-52" id="service">
         <div class="flex flex-col justify-center items-center gap-2">
@@ -356,8 +461,7 @@
                 </div>
                 <!-- Toggle Button -->
                 <div class="flex justify-center items-center">
-                    <p @click="open = !open"
-                        class="cursor-pointer text-[#feb633] font-semibold my-4 hover:underline">
+                    <p @click="open = !open" class="cursor-pointer text-[#feb633] font-semibold my-4 hover:underline">
                         <span x-text="open ? 'Show Less' : 'Show More'"></span>
                     </p>
                 </div>
@@ -529,7 +633,7 @@
                             class="w-full px-4 border shadow-md rounded-md border-transparent py-2 focus:outline-none focus-within:ring-2 focus:ring-[#FEC110]"
                             placeholder="Type your name" required>
                     </div>
-    
+
                     <div class="grid lg:grid-cols-2 gap-4 py-4">
                         <div class="w-full flex flex-col gap-2">
                             <label for="phone">
@@ -539,7 +643,7 @@
                                 class="w-full px-4 border shadow-md rounded-md border-transparent py-2 focus:outline-none focus-within:ring-2 focus:ring-[#FEC110]"
                                 placeholder="Type your number" required>
                         </div>
-    
+
                         <div class="w-full flex flex-col gap-2">
                             <label for="email">
                                 Email
@@ -549,14 +653,14 @@
                                 placeholder="Type your email" required>
                         </div>
                     </div>
-    
+
                     <div class="w-full flex flex-col gap-2 py-4">
                         <label for="message">Message</label>
                         <textarea id="message" name="message"
                             class="shadow-md rounded-md px-4 py-1 focus:outline-none focus-within:ring-2 focus:ring-[#FEC110]" rows="6"
                             placeholder="Type your message here"></textarea>
                     </div>
-    
+
                     <button type="submit"
                         class="py-3 my-5 cursor-pointer flex justify-center items-center w-fit px-4 lg:px-6 shadow-md bg-[#FEC110] text-white rounded-full hover:bg-black transition ease-in-out delay-150 duration-300">
                         Send Message
@@ -568,72 +672,6 @@
 
     <!-- Footer -->
     @include('footer')
-
-
-    <div class="hidden">
-        <section class="md:hidden px-4 py-10" id="experience" x-data="{ activeTabMobile: 'experience' }">
-            <div class="flex flex-col justify-center items-center gap-2">
-                <h2 class="text-center text-[#32333c] text-4xl font-bold capitalize">
-                    People i've worked with
-                </h2>
-                <div class="text-center w-20 h-0.5 bg-[#feb633]"></div>
-            </div>
-
-            <div class="flex justify-center gap-x-5 py-8">
-                <button @click="activeTabMobile = 'experience'; localStorage.setItem('activeTabMobile', 'experience')"
-                    class="text-lg cursor-pointer"
-                    :class="activeTabMobile === 'experience' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
-                    Experience
-                </button>
-
-                <button @click="activeTabMobile = 'education'; localStorage.setItem('activeTabMobile', 'education')"
-                    class="text-lg cursor-pointer"
-                    :class="activeTabMobile === 'education' ? 'text-[#feb633]' : 'text-[#8a91ac]'">
-                    Education
-                </button>
-            </div>
-
-            <div class="flex flex-col w-full">
-                <div class="flex items-center gap-4">
-                    <div
-                        class="flex h-28 w-28 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                        <p>Present</p>
-                        <p>|</p>
-                        <p>2021</p>
-                    </div>
-
-                    <div class="">
-                        <h2 class="">INFOLKS PVT LTD</h2>
-                        <p class="text-[#32333c] italic">Full Stack Developer</p>
-                    </div>
-                </div>
-
-                <div class="h-20 w-0.5 bg-[#8a91ac] flex justify-start translate-x-14"></div>
-
-                <div class="flex items-center gap-4">
-                    <div
-                        class="flex h-28 w-28 flex-col items-center justify-center rounded-full border bg-[#feb633] text-white">
-                        <p>Present</p>
-                        <p>|</p>
-                        <p>2021</p>
-                    </div>
-
-                    <div class="flex flex-col flex-wrap">
-                        <h2 class="text-xs">FLEMING EMBEDDED AND SOFTWARE SOLUTIONS</h2>
-                        <p class="text-[#32333c] italic">Full Stack Developer</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-
-
-    </div>
 </body>
 
 </html>
